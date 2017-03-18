@@ -1,3 +1,2 @@
-# JavaTraining
-## My own place to storage training code
+# My own Java playground
 Small folder which contains my JAVA practice files
