@@ -29,6 +29,14 @@ public class Main {
     private static void L4Of1(int liczba){
         System.out.println(liczba);
     }
+    private static boolean L4Of2EvenNumber(int liczba){
+        if((liczba %2)==0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 
     private static void L4Operators() {
 
@@ -42,6 +50,10 @@ public class Main {
         boolean isToF = true;
         String trojoperator = isToF ? "Wartosc to true" : "Wartosc to false";
         System.out.println(trojoperator);
+        boolean even = L4Of2EvenNumber(12);
+        System.out.println("Is 12 an even number?: " + even);
+        even = L4Of2EvenNumber(11);
+        System.out.println("Is 11 an even number?: " + even);
 
     }
 
@@ -57,19 +69,59 @@ public class Main {
         return powerScore*10;
     }
 
+    private static void L6Switch(String pick){
+        switch(pick.toLowerCase()){
+            case "one":
+                System.out.println("First string!");
+                break;
+            case "two":
+                System.out.println("Second string!");
+                break;
+            case "three":
+                System.out.println("Third string!");
+                break;
+            default:
+                System.out.println("Empty or invalid string! :(");
+                break;
+        }
+    }
+
+    private static void L7FastAboutLoops(){
+//        FOR loop
+        for(int x=0; x<3; x++){
+            System.out.println("FOR loop number:" + x);
+        }
+//        WHILE loop
+        int y=0;
+        boolean whileCheck = true;
+        while(whileCheck){
+            y++;
+            if(y>3){
+                whileCheck=false;
+                System.out.println("WHILE loop completed, bool is " + whileCheck);
+            }
+        }
+//        DO-WHILE loop
+        do{
+            System.out.println("DO-WHILE loop executed once even when \"while\" statement is not fulfilled");
+        }while(y!=4);
+    }
+
     public static void main(String[] args) {
 
         L3PrimitiveDT();
         L4Operators();
-        //L5 bracket
+//        L5 bracket
         System.out.println(L5MethodsExmpleAndOverloading(true,1232, 3, 200));
         boolean gameEndVarBool = true;
         int levelNmbr, bonus, highscore = 1398;
         int finalscore = L5MethodsExmpleAndOverloading(gameEndVarBool, highscore, levelNmbr=5,bonus=450);
         System.out.println(finalscore);
-        //Overloading method:
+//        Overloading method:
         finalscore=L5MethodsExampleAndOverloading(200);
         System.out.println(finalscore);
-        //End of L5 bracket
+//        End of L5 bracket
+        L6Switch("TWo");
+        L7FastAboutLoops();
     }
 }
