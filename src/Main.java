@@ -107,6 +107,96 @@ public class Main {
         }while(y!=4);
     }
 
+    private static void L8Classes(){
+
+        Car audi = new Car();
+        Car ford = new Car();
+        System.out.println("Model of car before setting is " + audi.getModel());
+        audi.setModel("a7");
+        System.out.println("Model of car is " + audi.getModel());
+        audi.setModel("a5");
+        System.out.println("Model of car after failing validation: " +audi.getModel());
+
+    }
+
+    private static void L9FunWithClasses(){
+
+//      ****  Without using constructors:
+
+        BAcc customer1 = new BAcc();
+
+//      **** Quick check for default values:
+
+        customer1.getCstMail();
+        customer1.getCstName();
+
+//      **** Setting values
+
+        customer1.setAccNmbr(0001);
+        customer1.setBalance(100.00);
+        customer1.setCstName("Andrew","Slowinski");
+        customer1.setCstMail("aslowinski@site.pl");
+        customer1.setCstNumber(505505505);
+
+//      **** Checking info:
+
+        System.out.println("\n********************\n");
+        System.out.println("Customer name is: " + customer1.getCstName());
+        System.out.println("Customer account number is: " + customer1.getAccNmbr());
+        System.out.println("Customer e-mail is: " + customer1.getCstMail());
+        System.out.println("Customer phone number is: " + customer1.getCstNumber());
+        System.out.println("Customer account balance is: " + customer1.getBalance());
+        customer1.depoFounds(100.50);
+        customer1.withFounds(300);
+        System.out.println("Customer account balance is: " + customer1.getBalance());
+        customer1.withFounds(150.00);
+
+//      **** With constructor:
+
+        BAcc customer2 = new BAcc(1002, 0.00, "Bob", "Yammet", "bobsky@bob.net", 777666555);
+
+//      **** Checking info:
+
+        System.out.println("\n********************\n");
+        System.out.println("Customer name is: " + customer2.getCstName());
+        System.out.println("Customer account number is: " + customer2.getAccNmbr());
+        System.out.println("Customer e-mail is: " + customer2.getCstMail());
+        System.out.println("Customer phone number is: " + customer2.getCstNumber());
+        System.out.println("Customer account balance is: " + customer2.getBalance());
+        customer2.depoFounds(20.60);
+        customer2.withFounds(30);
+        System.out.println("Customer account balance is: " + customer2.getBalance());
+        customer2.withFounds(10.00);
+
+        BAcc customer3 = new BAcc("Timotty", "Lewinsky", "tl@timtom.so", 606707444);
+
+        System.out.println("\n********************\n");
+        System.out.println("Customer name is: " + customer3.getCstName());
+        System.out.println("Customer account number is: " + customer3.getAccNmbr());
+        System.out.println("Customer e-mail is: " + customer3.getCstMail());
+        System.out.println("Customer phone number is: " + customer3.getCstNumber());
+        System.out.println("Customer account balance is: " + customer3.getBalance());
+
+
+    }
+
+    private static void L10PolishingConstructors(){
+
+        VipCustomers andrewT = new VipCustomers("Andrew Tonks", 1000.00, "at@drew.net");
+        System.out.println("\nFirst VIP customer: " + andrewT.getcName() + "\nCredit Limit: " + andrewT.getcCreditLimit() + "\nE-mail: " + andrewT.getcEmail());
+        System.out.println("\n********* Next customer **********\n");
+        VipCustomers bobR = new VipCustomers("Bob Robs", 990d);
+        System.out.println("First VIP customer: " + bobR.getcName() + "\nCredit Limit: " + bobR.getcCreditLimit() + "\nE-mail: " + bobR.getcEmail());
+        System.out.println("\n********* Next customer **********\n");
+        VipCustomers vickyV = new VipCustomers();
+        System.out.println("First VIP customer: " + vickyV.getcName() + "\nCredit Limit: " + vickyV.getcCreditLimit() + "\nE-mail: " + vickyV.getcEmail());
+
+
+
+    }
+
+
+
     public static void main(String[] args) {
 
         L3PrimitiveDT();
@@ -123,5 +213,9 @@ public class Main {
 //        End of L5 bracket
         L6Switch("TWo");
         L7FastAboutLoops();
+        L8Classes();
+        L9FunWithClasses();  // And constructors. Mostly with constructors.
+        L10PolishingConstructors();
+
     }
 }
