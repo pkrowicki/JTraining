@@ -4,6 +4,11 @@
  *
  * This file contains my "notes" from Udemy Java tutorial
  *
+ *
+ * Animals.java, Dog.java - inheritance
+ * VipCustomers.java, BAcc.java, Car.java - classes and constructors
+ *
+ *
  ************************/
 
 
@@ -195,27 +200,38 @@ public class Main {
 
     }
 
+    private static void L11Inheritance(){
+
+        Animals animal1 = new Animals("Animal 1", 1,1,54,12);
+        Dog dog1 = new Dog("Husky", 30, 12, 2,4,1,20,"short snowy");
+        dog1.eat();
+        dog1.walk();
+        dog1.run();
+
+    }
+
 
 
     public static void main(String[] args) {
 
-        L3PrimitiveDT();
-        L4Operators();
-//        L5 bracket
-        System.out.println(L5MethodsExmpleAndOverloading(true,1232, 3, 200));
-        boolean gameEndVarBool = true;
-        int levelNmbr, bonus, highscore = 1398;
-        int finalscore = L5MethodsExmpleAndOverloading(gameEndVarBool, highscore, levelNmbr=5,bonus=450);
-        System.out.println(finalscore);
-//        Overloading method:
-        finalscore=L5MethodsExampleAndOverloading(200);
-        System.out.println(finalscore);
-//        End of L5 bracket
-        L6Switch("TWo");
-        L7FastAboutLoops();
-        L8Classes();
-        L9FunWithClasses();  // And constructors. Mostly with constructors.
-        L10PolishingConstructors();
+//        L3PrimitiveDT();
+//        L4Operators();
+////        L5 bracket
+//        System.out.println(L5MethodsExmpleAndOverloading(true,1232, 3, 200));
+//        boolean gameEndVarBool = true;
+//        int levelNmbr, bonus, highscore = 1398;
+//        int finalscore = L5MethodsExmpleAndOverloading(gameEndVarBool, highscore, levelNmbr=5,bonus=450);
+//        System.out.println(finalscore);
+////        Overloading method:
+//        finalscore=L5MethodsExampleAndOverloading(200);
+//        System.out.println(finalscore);
+////        End of L5 bracket
+//        L6Switch("TWo");
+//        L7FastAboutLoops();
+//        L8Classes();
+//        L9FunWithClasses();  // And constructors. Mostly with constructors.
+//        L10PolishingConstructors();
+        L11Inheritance();
 
     }
 }
