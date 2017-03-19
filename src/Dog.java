@@ -1,5 +1,5 @@
 /**
- * Created by Ushi on 19.03.2017.
+ * Created by Pawel on 19.03.2017.
  */
 public class Dog extends Animals {
 

@@ -210,28 +210,56 @@ public class Main {
 
     }
 
+    private static void L12ChallengeWithCars(){
+
+        Vehicle veh1 = new Vehicle(20,"By hand!");
+        veh1.moving(true);
+        System.out.println(veh1.getSteering());
+        System.out.println("\n*******\n");
+        Cars veh2 = new Cars(40, 4, 4, "City car");
+        veh2.moving(false);
+        System.out.println(veh2.getSteering());
+        System.out.println(veh2.getSpeed());
+        System.out.println(veh2.getNumberGears());
+        System.out.println("\n*******\n");
+        Subaru veh3 = new Subaru(20,6,"offroad",1, 250, "Red");
+        veh3.moving(true);
+        System.out.println(veh3.getNumberOfWheels()+ veh3.getNumberGears()+ veh3.getSteering()+ veh3.getCarClass()+ veh3.getColour()+ veh3.getSpeedTop()+ veh3.getSpeed());
+        System.out.println("Fun with gears :)");
+        System.out.println(veh3.getCurrentGear());
+        veh3.changeGear(1);
+        veh3.changeGear(2);
+        veh3.changeGear(2);
+        System.out.println(veh3.getCurrentGear());
+        veh3.changeGear(0);
+        veh3.changeGear(3);
+        System.out.println(veh3.getCurrentGear());
+
+    }
+
 
 
     public static void main(String[] args) {
 
-//        L3PrimitiveDT();
-//        L4Operators();
-////        L5 bracket
-//        System.out.println(L5MethodsExmpleAndOverloading(true,1232, 3, 200));
-//        boolean gameEndVarBool = true;
-//        int levelNmbr, bonus, highscore = 1398;
-//        int finalscore = L5MethodsExmpleAndOverloading(gameEndVarBool, highscore, levelNmbr=5,bonus=450);
-//        System.out.println(finalscore);
-////        Overloading method:
-//        finalscore=L5MethodsExampleAndOverloading(200);
-//        System.out.println(finalscore);
-////        End of L5 bracket
-//        L6Switch("TWo");
-//        L7FastAboutLoops();
-//        L8Classes();
-//        L9FunWithClasses();  // And constructors. Mostly with constructors.
-//        L10PolishingConstructors();
+        L3PrimitiveDT();
+        L4Operators();
+//        L5 bracket
+        System.out.println(L5MethodsExmpleAndOverloading(true,1232, 3, 200));
+        boolean gameEndVarBool = true;
+        int levelNmbr, bonus, highscore = 1398;
+        int finalscore = L5MethodsExmpleAndOverloading(gameEndVarBool, highscore, levelNmbr=5,bonus=450);
+        System.out.println(finalscore);
+//        Overloading method:
+        finalscore=L5MethodsExampleAndOverloading(200);
+        System.out.println(finalscore);
+//        End of L5 bracket
+        L6Switch("TWo");
+        L7FastAboutLoops();
+        L8Classes();
+        L9FunWithClasses();  // And constructors. Mostly with constructors.
+        L10PolishingConstructors();
         L11Inheritance();
+        L12ChallengeWithCars();
 
     }
 }
